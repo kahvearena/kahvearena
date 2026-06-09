@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>101 Okey | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="okey101.css"/>
+</head>
+<body onload="guard(); start101();">
+<header class="topbar">
+  <div class="logo" onclick="go('dashboard.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav">
+    <a href="dashboard.html">Panel</a>
+    <a href="lobby.html">Masalar</a>
+    <a href="wallet.html">Cüzdan</a>
+  </nav>
+  <div class="actions">
+    <button class="ghost" onclick="go('lobby.html')">Lobiye Dön</button>
+  </div>
+</header>
+
+<main class="okeyPage">
+  <section class="okeyTop">
+    <div>
+      <h1>101 Okey</h1>
+      <p>Sen + 3 robot oyuncu • Gerçek taş, gösterge, okey ve puan motoru ilk sürüm</p>
+    </div>
+
+    <div class="topBoxes">
+      <div class="smallBox">
+        <small>Gösterge</small>
+        <b id="indicatorTile">-</b>
+      </div>
+      <div class="smallBox">
+        <small>Okey</small>
+        <b id="okeyTile">-</b>
+      </div>
+      <div class="smallBox gold">
+        <small>Havuz</small>
+        <b>₺120</b>
+      </div>
+    </div>
+  </section>
+
+  <section class="gameShell">
+    <aside class="scorePanel">
+      <h3>Skor Tablosu</h3>
+      <div id="scoreRows"></div>
+
+      <h3>El Analizi</h3>
+      <div class="analysisBox">
+        <p>En iyi seri/per toplamı: <b id="bestOpenScore">0</b></p>
+        <p>Bulunan grup: <b id="groupCount">0</b></p>
+        <p>Elde kalan ceza: <b id="deadScore">0</b></p>
+        <p>Açma durumu: <b id="canOpen">Hayır</b></p>
+      </div>
+
+      <button onclick="newRound()">Yeni El Başlat</button>
+    </aside>
+
+    <section class="realTable">
+      <div class="seat seatTop">
+        <div class="avatar">🤖</div>
+        <b>Robot Murat</b>
+        <span id="p2count">21 taş</span>
+      </div>
+
+      <div class="seat seatLeft">
+        <div class="avatar">🤖</div>
+        <b>Robot Ali</b>
+        <span id="p1count">21 taş</span>
+      </div>
+
+      <div class="seat seatRight">
+        <div class="avatar">🤖</div>
+        <b>Robot Can</b>
+        <span id="p3count">21 taş</span>
+      </div>
+
+      <div class="centerStack">
+        <div class="deckCard" onclick="drawDeck()">
+          <span>🀄</span>
+          <b>Deste</b>
+          <small id="deckCount">0 taş</small>
+        </div>
+
+        <div class="deckCard discardCard" onclick="takeDiscard()">
+          <span id="discardTop">-</span>
+          <b>Atılan</b>
+          <small>Ortadan al</small>
+        </div>
+
+        <div class="turnCard">
+          <small>Sıra</small>
+          <b id="turnLabel">Sende</b>
+        </div>
+      </div>
+
+      <div class="openedArea">
+        <h3>Açılan Gruplar</h3>
+        <div id="openedGroups" class="openedGroups"></div>
+      </div>
+
+      <div class="myPanel">
+        <div class="myInfo">
+          <div>
+            <h2>Senin Elin</h2>
+            <p id="infoText">Önce taş çek veya ortadan al. Sonra bir taş seçip at.</p>
+          </div>
+          <div class="selectedBox">
+            <small>Seçili Taş</small>
+            <b id="selectedTileText">Yok</b>
+          </div>
+        </div>
+
+        <div id="myHand" class="myHand"></div>
+
+        <div class="playActions">
+          <button onclick="drawDeck()">Desteden Çek</button>
+          <button class="ghost" onclick="takeDiscard()">Ortadan Al</button>
+          <button onclick="discardSelectedTile()">Seçili Taşı At</button>
+          <button class="ghost" onclick="openHand()">101 Aç</button>
+          <button class="danger" onclick="finishHand()">Bitmeyi Dene</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="logPanel">
+      <h3>Oyun Akışı</h3>
+      <div id="logList" class="logList"></div>
+    </aside>
+  </section>
+</main>
+
+<script src="app.js"></script>
+<script src="okey101.js"></script>
+</body>
+</html>
