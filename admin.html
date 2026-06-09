@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="guard()">
+<header class="topbar">
+  <div class="logo" onclick="go('dashboard.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav"><a href="dashboard.html">Panel</a><a href="wallet.html">Cüzdan</a><a href="lobby.html">Masalar</a></nav>
+</header>
+
+<main class="page">
+  <div class="pageHead"><div><h1>Admin Paneli</h1><p>Kullanıcılar, masalar ve finans talepleri.</p></div></div>
+  <div class="dashGrid">
+    <div class="statCard"><small>Kullanıcı</small><b>4.892</b><span>+128 bugün</span></div>
+    <div class="statCard"><small>Aktif Masa</small><b>128</b><span>23 yüksek havuz</span></div>
+    <div class="statCard"><small>Yatırma Talebi</small><b>42</b><span>Bekliyor</span></div>
+    <div class="statCard"><small>Çekim Talebi</small><b>18</b><span>İnceleme</span></div>
+  </div>
+
+  <section class="section noPad">
+    <h2>Bekleyen İşlemler</h2>
+    <div class="tableList">
+      <div class="row"><b>Ali***</b><span>Para Yatırma</span><span>₺300</span><strong>Bekliyor</strong><button>Onayla</button></div>
+      <div class="row"><b>Memo***</b><span>Para Çekme</span><span>₺500</span><strong>İnceleme</strong><button>Detay</button></div>
+      <div class="row"><b>Kurs***</b><span>Masa İtirazı</span><span>101 Okey</span><strong>Açık</strong><button>İncele</button></div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Yatır | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="guard()">
+<header class="topbar">
+  <div class="logo" onclick="go('dashboard.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav"><a href="wallet.html">Cüzdan</a><a href="withdraw.html">Para Çek</a></nav>
+</header>
+
+<main class="page smallPage">
+  <h1>Para Yatır</h1>
+  <p class="warning">Bu ekran prototiptir. Gerçek ödeme alınmaz, banka/kart/kripto entegrasyonu bağlı değildir.</p>
+  <div class="formCard">
+    <label>Yöntem</label>
+    <select><option>Banka Havalesi</option><option>Kredi/Banka Kartı</option><option>USDT TRC20</option><option>PayPal / Yurtdışı</option></select>
+    <label>Tutar</label>
+    <input placeholder="Örn: 300"/>
+    <label>Açıklama / İşlem Notu</label>
+    <input placeholder="Kullanıcı ID veya açıklama"/>
+    <button onclick="alertBox('Para yatırma talebi oluşturuldu. Canlı ödeme entegrasyonu kapalıdır.')">Yatırma Talebi Oluştur</button>
+  </div>
+
+  <div class="bankBox">
+    <h3>Örnek Havale Bilgileri</h3>
+    <p><b>Alıcı:</b> KahveArena Teknoloji Ltd.</p>
+    <p><b>IBAN:</b> TR00 0000 0000 0000 0000 0000 00</p>
+    <p><b>Açıklama:</b> KA-USER-1024</p>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

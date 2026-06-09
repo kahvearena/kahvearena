@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="logo" onclick="go('index.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav">
+    <a href="dashboard.html">Panel</a>
+    <a href="games.html">Oyunlar</a>
+    <a href="lobby.html">Masalar</a>
+    <a href="wallet.html">Cüzdan</a>
+    <a href="profile.html">Profil</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+  <div class="actions">
+    <button class="ghost" onclick="logout()">Çıkış</button>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main class="page">
+  <div class="pageHead">
+    <div>
+      <h1>Hoş geldin, <span id="username">Oyuncu</span></h1>
+      <p>Bugün rakip bul, masaya gir ve kahve oyunlarında yüksel.</p>
+    </div>
+    <button onclick="go('wallet.html')">Bakiye Yükle</button>
+  </div>
+
+  <div class="dashGrid">
+    <div class="statCard"><small>Bakiye</small><b>₺450,00</b><span>Çekilebilir: ₺210,00</span></div>
+    <div class="statCard"><small>Bugünkü Kazanç</small><b>₺120,00</b><span>3 masa kazandın</span></div>
+    <div class="statCard"><small>Seviye</small><b>Usta</b><span>İlk %12 içindesin</span></div>
+    <div class="statCard"><small>Galibiyet</small><b>%61</b><span>92 oyun / 56 galibiyet</span></div>
+  </div>
+
+  <section class="section noPad">
+    <h2>Hızlı Katıl</h2>
+    <div class="tableList">
+      <div class="row"><b>101 Okey</b><span>4/4 Oyuncu</span><span>Giriş: ₺30</span><strong>Havuz: ₺120</strong><button onclick="go('table.html')">İzle</button></div>
+      <div class="row"><b>Pişti</b><span>1/2 Oyuncu</span><span>Giriş: ₺50</span><strong>Havuz: ₺100</strong><button onclick="go('table.html')">Katıl</button></div>
+      <div class="row"><b>Tavla</b><span>1/2 Oyuncu</span><span>Giriş: ₺100</span><strong>Havuz: ₺200</strong><button onclick="go('table.html')">Katıl</button></div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

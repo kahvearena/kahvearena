@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KahveArena | Kahve Oyunlarında Rakibini Bul</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo" onclick="go('index.html')">☕ Kahve<span>Arena</span></div>
+    <nav id="nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="games.html">Oyunlar</a>
+      <a href="lobby.html">Masalar</a>
+      <a href="wallet.html">Cüzdan</a>
+      <a href="leaderboard.html">Liderlik</a>
+    </nav>
+    <div class="actions">
+      <button class="ghost" onclick="go('login.html')">Giriş Yap</button>
+      <button onclick="go('register.html')">Üye Ol</button>
+      <button class="menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="heroText">
+      <span class="badge">101 • Pişti • Tavla • Okey • Batak</span>
+      <h1>Kahve oyunlarında rakibini bul, masaya otur, kazanan havuzu alsın.</h1>
+      <p>
+        KahveArena, kahve oyunları için rekabetçi masa platformu prototipidir.
+        Para yatırma/çekme ekranları hazırdır ancak gerçek finansal işlem entegrasyonu kapalıdır.
+      </p>
+      <div class="heroBtns">
+        <button onclick="requireLogin('lobby.html')">Hemen Masaya Otur</button>
+        <button class="ghost" onclick="go('games.html')">Oyunları Gör</button>
+      </div>
+      <div class="stats">
+        <div><b>128</b><small>Aktif masa</small></div>
+        <div><b>4.892</b><small>Oyuncu</small></div>
+        <div><b>₺82.450</b><small>Bugünkü havuz</small></div>
+      </div>
+    </div>
+    <div class="heroCard">
+      <div class="liveTitle">Canlı Popüler Masa</div>
+      <div class="tableCard big">
+        <div>
+          <h3>101 Okey Kapışması</h3>
+          <p>4 oyuncu • Hızlı masa</p>
+        </div>
+        <div class="pool">₺120</div>
+        <button onclick="requireLogin('table.html')">Katıl</button>
+      </div>
+      <div class="miniWinners">
+        <h4>Son Kazananlar</h4>
+        <p><span>Ali***</span><b>₺60</b></p>
+        <p><span>Memo***</span><b>₺180</b></p>
+        <p><span>Kurs***</span><b>₺90</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Nasıl çalışır?</h2>
+    <div class="grid3">
+      <div class="infoCard"><b>1</b><h3>Bakiye Yükle</h3><p>Cüzdan sayfasından ödeme talebi oluşturursun. Bu prototipte işlem simülasyondur.</p></div>
+      <div class="infoCard"><b>2</b><h3>Masaya Katıl</h3><p>101, Pişti, Tavla veya Okey masasını seçip giriş bedelini görürsün.</p></div>
+      <div class="infoCard"><b>3</b><h3>Kazan ve Çek</h3><p>Oyunu kazanan havuzu alır. Para çekme ekranı hazır, canlı ödeme kapalıdır.</p></div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <h2>Popüler Oyunlar</h2>
+    <div class="gameGrid">
+      <div class="gameCard" onclick="requireLogin('lobby.html?game=101')"><span>🀄</span><h3>101 Okey</h3><p>Strateji, seri ve taş takibi.</p></div>
+      <div class="gameCard" onclick="requireLogin('lobby.html?game=pisti')"><span>🃏</span><h3>Pişti</h3><p>Hızlı, basit ve rekabetçi.</p></div>
+      <div class="gameCard" onclick="requireLogin('lobby.html?game=tavla')"><span>🎲</span><h3>Tavla</h3><p>Zar, taktik ve risk.</p></div>
+      <div class="gameCard" onclick="requireLogin('lobby.html?game=okey')"><span>☕</span><h3>Okey</h3><p>Klasik kahve masası.</p></div>
+    </div>
+  </section>
+
+  <footer>© 2026 KahveArena — Prototip sürüm. Canlı ödeme ve para çekme kapalıdır.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

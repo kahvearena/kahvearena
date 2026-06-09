@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyunlar | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="logo" onclick="go('index.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="games.html">Oyunlar</a>
+    <a href="lobby.html">Masalar</a>
+    <a href="wallet.html">Cüzdan</a>
+  </nav>
+  <div class="actions"><button onclick="requireLogin('dashboard.html')">Panel</button><button class="menu" onclick="toggleMenu()">☰</button></div>
+</header>
+
+<main class="page">
+  <div class="pageHead"><div><h1>Kahve Oyunları</h1><p>Oyun seç, açık masaları gör, rakibinle kapış.</p></div></div>
+  <div class="gameGrid">
+    <div class="gameCard large" onclick="requireLogin('lobby.html')"><span>🀄</span><h3>101 Okey</h3><p>4 kişilik masalar, seri yap, el bitir, havuzu kap.</p><button>Masaları Gör</button></div>
+    <div class="gameCard large" onclick="requireLogin('lobby.html')"><span>🃏</span><h3>Pişti</h3><p>2 kişilik hızlı karşılaşmalar. Kartını doğru zamanda at.</p><button>Masaları Gör</button></div>
+    <div class="gameCard large" onclick="requireLogin('lobby.html')"><span>🎲</span><h3>Tavla</h3><p>1v1 klasik tavla. Risk al, kapı tut, mars yap.</p><button>Masaları Gör</button></div>
+    <div class="gameCard large" onclick="requireLogin('lobby.html')"><span>☕</span><h3>Okey</h3><p>Klasik kahve havası. Taşları takip et, doğru elde bitir.</p><button>Masaları Gör</button></div>
+    <div class="gameCard large" onclick="requireLogin('lobby.html')"><span>♠️</span><h3>Batak</h3><p>İhale, koz ve strateji. Elini iyi hesapla.</p><button>Masaları Gör</button></div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Çek | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="guard()">
+<header class="topbar">
+  <div class="logo" onclick="go('dashboard.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav"><a href="wallet.html">Cüzdan</a><a href="deposit.html">Para Yatır</a></nav>
+</header>
+
+<main class="page smallPage">
+  <h1>Para Çek</h1>
+  <p class="warning">Bu ekran prototiptir. Canlı ödeme gönderimi yapılmaz. KYC/lisans/izin süreçleri tamamlanmadan kullanılmamalıdır.</p>
+  <div class="formCard">
+    <label>Çekim Yöntemi</label>
+    <select><option>Banka Hesabı</option><option>USDT TRC20</option><option>PayPal / Yurtdışı</option></select>
+    <label>Tutar</label>
+    <input placeholder="Örn: 200"/>
+    <label>IBAN / Cüzdan Adresi</label>
+    <input placeholder="TR... veya kripto cüzdan adresi"/>
+    <label>Ad Soyad</label>
+    <input placeholder="Hesap sahibi"/>
+    <button onclick="alertBox('Para çekme talebi oluşturuldu. Canlı ödeme gönderimi kapalıdır.')">Çekim Talebi Oluştur</button>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

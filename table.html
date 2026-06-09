@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyun Masası | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="guard()">
+<header class="topbar">
+  <div class="logo" onclick="go('dashboard.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav"><a href="lobby.html">Masalar</a><a href="wallet.html">Cüzdan</a><a href="profile.html">Profil</a></nav>
+</header>
+
+<main class="page">
+  <div class="gameTable">
+    <div class="tableTop">
+      <div><h1>101 Okey Masası</h1><p>Masa No: KA-10482 • Giriş: ₺30 • Havuz: ₺120</p></div>
+      <button class="danger" onclick="go('lobby.html')">Masadan Çık</button>
+    </div>
+    <div class="players">
+      <div class="player">👤 Ali*** <span>Hazır</span></div>
+      <div class="player">👤 Memo*** <span>Hazır</span></div>
+      <div class="player active">👤 Sen <span>Sıran</span></div>
+      <div class="player">👤 Can*** <span>Bekliyor</span></div>
+    </div>
+    <div class="board">
+      <div class="tile">7</div><div class="tile">8</div><div class="tile">9</div><div class="tile red">11</div><div class="tile red">12</div><div class="tile red">13</div>
+      <div class="centerPot">₺120<br/><small>Havuz</small></div>
+    </div>
+    <div class="tableActions">
+      <button>Taş Çek</button>
+      <button>Taş At</button>
+      <button onclick="alertBox('Prototip sonucu: Kazanan olarak işaretlendin. Canlı para dağıtımı kapalıdır.')">Kazandım Bildir</button>
+    </div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

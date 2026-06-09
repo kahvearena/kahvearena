@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cüzdan | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="guard()">
+<header class="topbar">
+  <div class="logo" onclick="go('dashboard.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav"><a href="dashboard.html">Panel</a><a href="lobby.html">Masalar</a><a href="deposit.html">Para Yatır</a><a href="withdraw.html">Para Çek</a></nav>
+</header>
+
+<main class="page">
+  <div class="pageHead">
+    <div><h1>Cüzdan</h1><p>Para yatırma ve çekme ekranları prototiptir. Canlı finansal işlem yoktur.</p></div>
+  </div>
+  <div class="dashGrid">
+    <div class="statCard"><small>Toplam Bakiye</small><b>₺450,00</b><span>Güncel hesap bakiyesi</span></div>
+    <div class="statCard"><small>Çekilebilir</small><b>₺210,00</b><span>İşlem onayı sonrası</span></div>
+    <div class="statCard"><small>Masada Kilitli</small><b>₺90,00</b><span>Aktif oyunlar</span></div>
+    <div class="statCard"><small>Bekleyen</small><b>₺150,00</b><span>İnceleme bekliyor</span></div>
+  </div>
+  <div class="walletActions">
+    <button onclick="go('deposit.html')">Para Yatır</button>
+    <button class="ghost" onclick="go('withdraw.html')">Para Çek</button>
+  </div>
+
+  <section class="section noPad">
+    <h2>İşlem Geçmişi</h2>
+    <div class="tableList">
+      <div class="row"><b>Para Yatırma</b><span>Banka Havalesi</span><span>Bugün 18:42</span><strong>+₺300</strong><em>Bekliyor</em></div>
+      <div class="row"><b>Oyun Kazancı</b><span>Pişti Masası</span><span>Dün 22:10</span><strong>+₺100</strong><em>Onaylı</em></div>
+      <div class="row"><b>Masa Girişi</b><span>101 Okey</span><span>Dün 21:55</span><strong>-₺30</strong><em>Tamamlandı</em></div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

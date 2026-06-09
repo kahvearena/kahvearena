@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masalar | KahveArena</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="guard()">
+<header class="topbar">
+  <div class="logo" onclick="go('index.html')">☕ Kahve<span>Arena</span></div>
+  <nav id="nav">
+    <a href="dashboard.html">Panel</a>
+    <a href="games.html">Oyunlar</a>
+    <a href="lobby.html">Masalar</a>
+    <a href="wallet.html">Cüzdan</a>
+  </nav>
+  <div class="actions"><button onclick="go('create-table.html')">Masa Oluştur</button><button class="menu" onclick="toggleMenu()">☰</button></div>
+</header>
+
+<main class="page">
+  <div class="pageHead">
+    <div><h1>Aktif Masalar</h1><p>Giriş bedeli, oyuncu sayısı ve toplam havuza göre masa seç.</p></div>
+    <button onclick="go('create-table.html')">+ Yeni Masa</button>
+  </div>
+
+  <div class="filters">
+    <button class="active">Tümü</button><button>101 Okey</button><button>Pişti</button><button>Tavla</button><button>Okey</button><button>Batak</button>
+  </div>
+
+  <div class="tableList">
+    <div class="row"><b>101 Okey</b><span>3/4 Oyuncu</span><span>Giriş: ₺30</span><strong>Havuz: ₺120</strong><button onclick="go('table.html')">Katıl</button></div>
+    <div class="row"><b>Pişti</b><span>1/2 Oyuncu</span><span>Giriş: ₺50</span><strong>Havuz: ₺100</strong><button onclick="go('table.html')">Katıl</button></div>
+    <div class="row"><b>Tavla</b><span>1/2 Oyuncu</span><span>Giriş: ₺100</span><strong>Havuz: ₺200</strong><button onclick="go('table.html')">Katıl</button></div>
+    <div class="row"><b>Okey</b><span>2/4 Oyuncu</span><span>Giriş: ₺25</span><strong>Havuz: ₺100</strong><button onclick="go('table.html')">Katıl</button></div>
+    <div class="row"><b>Batak</b><span>4/4 Oyuncu</span><span>Giriş: ₺75</span><strong>Havuz: ₺300</strong><button onclick="go('table.html')">İzle</button></div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
